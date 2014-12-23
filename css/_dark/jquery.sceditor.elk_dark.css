@@ -1,0 +1,115 @@
+html, body, p, code:before, table {
+	margin: 0;
+	padding: 0;
+	color: #afafaf;
+}
+
+ul, ol {
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+table, td {
+	min-width: 1em;
+	border: 1px dotted #000;
+	empty-cells: show;
+}
+
+code:before {
+	position: absolute;
+	content: 'Code:';
+	top: -1.7em;
+	left: 0;
+	font-size: 1.2em;
+	text-align: left;
+}
+code {
+	margin-top: 1.5em;
+	position: relative;
+	background: #f3f3f3;
+	border: 1px solid #dfdfdf;
+	white-space: pre;
+	padding: .25em;
+	font-family: "DejaVu Sans Mono", Monaco, Consolas, monospace;
+	font-size: 0.7em;
+	border-top: 2px solid #bbb;
+	border-bottom: 3px solid #aaa;
+	display: block;
+}
+blockquote {
+	overflow: auto;
+	margin: 0 0 1em 0;
+	padding: 6px 10px;
+	box-shadow: 2px 2px 2px #ddd;
+	border: 1px solid #ccc;
+	background: #fff;
+}
+blockquote cite, code cite {
+	border-bottom: none;
+	background: #fff;
+	color: #555;
+	font-size: 0.786em;
+	padding: 0 0 4px;
+	display: block;
+}
+code cite {
+	position: relative;
+	top: -1.9em;
+	font-size: 1.3em;
+	margin-left: 2.7em;
+	margin-bottom: -1.5em;
+}
+/* Will correctly colour down to seventh level of nested quotes in editor. Can be extended easily enough. */
+body>blockquote, body>blockquote>blockquote, body>blockquote>blockquote>blockquote>blockquote,
+body>blockquote>blockquote>blockquote>blockquote>blockquote>blockquote {
+	background: #1a1a1a;
+}
+body>blockquote>blockquote>cite, body>blockquote>blockquote>blockquote>blockquote>cite,
+body>blockquote>blockquote>blockquote>blockquote>blockquote>blockquote>cite {
+	background: #1a1a1a;
+}
+blockquote cite a:link, blockquote cite a:visited {
+	text-decoration: none;
+	color: #555;
+}
+div {
+	min-height: 1em; /*height:auto !important; height: 1em;*/
+}
+h1, h2, h3, h4, h5, h6 {
+	padding: 0; margin: 0;
+}
+aside:before {
+	content: "[*]";
+	vertical-align: super;
+	font-size: .8em;
+}
+aside {
+	display: inline;
+	color: #50aa3a;
+	font-weight: 700;
+}
+.sceditor-toolbar {
+	border: 0px solid #7C7360;
+	border-bottom: 0;
+	background: #222;
+	box-shadow: none;
+}
+.sceditor-container {
+	border: 1px solid #7C7360;
+	background: #222;
+}
+.sceditor-container iframe, .sceditor-container textarea {
+	background: #222;
+	color: #afafaf;
+}
+#editor_toolbar_container {
+	border: 1px solid #7C7360;
+	border-bottom: 0;
+}
+.sceditor-grip {
+	border-top: 1px solid #7C7360;
+	box-shadow: none;
+	background: #222;
+}
