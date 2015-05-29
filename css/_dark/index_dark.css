@@ -1,11 +1,9 @@
 /* INTRODUCTION
-/* This variant is the standard, light, Elkarte default theme.
 /* This is eye candy only. All the layout code is in index.css.
 /*
 /* All theme variants depend on the layout code for stability.
 /* It is better to copy code to a variant CSS file for testing.
 /* ------------------------------------------------------- */
-/* $CONTENTS - still a bit WIP. @todo
 /*
 /*		$GENERAL.............Global resets, clearfixes, etc.
 /*		$COMMON..............Common classes to drive you bonkers.
@@ -41,18 +39,16 @@
 /*		$MEDIA...............Experimental media queries.
 /* ------------------------------------------------------- */
 
-
-
-
 /*	$GENERAL	*/
 /* ------------------------------------------------------- */
 /* Normal, standard links. */
 a, a:link, a:visited,
-/* Links that open in a new window. */
+	/* Links that open in a new window. */
 a.new_win:link, a.new_win:visited {
 	color: #ababab;
 	text-decoration: none;
 }
+
 /* Cursor declared here.Should not be required anywhere else. */
 a:hover, a.new_win:hover {
 	text-decoration: underline;
@@ -63,20 +59,22 @@ a:hover, a.new_win:hover {
 html {
 	background: #222;
 }
+
 body {
 	background: #252525;
 	background: url(../../images/_dark/bk_body.jpg) repeat scroll 0 0 rgba(0, 0, 0, 0);
 	color: #afafaf;
 }
+
 fieldset {
-	border: none;
 	background: transparent;
-	border: 1px solid #7C7360;
+	border: 1px solid #7c7360;
 	padding: 6px;
 	box-shadow: none;
 	border-radius: 5px;
 	margin: 5px 0;
 }
+
 legend {
 	background: url(../../images/selected_open.png) no-repeat scroll left center transparent;
 	cursor: pointer;
@@ -85,36 +83,39 @@ legend {
 	font-size: 1.071em;
 	margin-left: 15px;
 }
+
 .collapsed legend {
 	background: url(../../images/selected.png) no-repeat scroll left center transparent;
 }
 
 input, button, select, textarea, .editor {
-	border: 1px solid #7C7360;
+	border: 1px solid #7c7360;
 	border-radius: 2px;
-	background: #1A1A1A;
+	background: #1a1a1a;
 	color: #afafaf;
 }
 
 input:hover, textarea:hover, button:hover, select:hover {
 	border: 1px solid #999;
 }
+
 textarea:hover, .editor:hover {
 	background: #fbfbfb;
 }
+
 input:focus, textarea:focus, button:focus, select:focus, .editor:focus {
 	border: 1px solid #999;
 }
+
 /* Give disabled text input elements a different background color. */
 input[disabled].input_text, input[disabled].input_password {
-	background: #7C7360;
+	background: #7c7360;
 }
 
 /* The OpenID login form */
 .openid_login {
 	padding-left: 20px;
-	background: white url(../../images/openid.png) no-repeat;
-	background-position: 2% 50%;
+	background: white url(../../images/openid.png) no-repeat 2% 50%;
 }
 
 /* Common button styling. */
@@ -123,13 +124,13 @@ input[disabled].input_text, input[disabled].input_password {
 /*    .right_submit is right floated */
 /*    .left_submit is left floated */
 /* The button_reset class may need attention too. */
-.button_submit, .right_submit, .left_submit, .button_reset,
-/* Anchors styled to look like buttons. */
-/* These have standard body text size. Can be chained with smalltext class. */
+.button_submit, .right_submit, .left_submit, .button_reset, .drop_area_fileselect_text,
+	/* Anchors styled to look like buttons. */
+	/* These have standard body text size. Can be chained with smalltext class. */
 .linkbutton:link, .linkbutton_right:link, .linkbutton_left:link,
 .linkbutton:visited, .linkbutton_right:visited, .linkbutton_left:visited {
 	border-radius: 2px;
-	border: 1px solid #1E1E1E;
+	border: 1px solid #1e1e1e;
 	border-top: 1px solid #2f2f2f;
 	border-left: 1px solid #2f2f2f;
 	background: #ababab;
@@ -140,7 +141,7 @@ input[disabled].input_text, input[disabled].input_password {
 .button_submit:hover, .right_submit:hover, .left_submit:hover,
 .button_reset:hover,
 .linkbutton:hover, .linkbutton_right:hover, .linkbutton_left:hover {
-	border: 1px solid #1E1E1E;
+	border: 1px solid #1e1e1e;
 	border-top: 1px solid #2f2f2f;
 	border-left: 1px solid #2f2f2f;
 	text-decoration: none;
@@ -155,6 +156,7 @@ input[disabled].input_text, input[disabled].input_password {
 	background: #5aa05e;
 	color: #fff;
 }
+
 /* approval indicator */
 .require_approval {
 	border-radius: 4px;
@@ -165,9 +167,8 @@ input[disabled].input_text, input[disabled].input_password {
 /* Standard horizontal rule.. ([hr], etc.) */
 hr {
 	border-left: 0;
-	border-top: 1px solid #7C7360;
-	background: #7C7360;
-	background-color: #7C7360;
+	border-top: 1px solid #7c7360;
+	background: #7c7360;
 }
 
 strong {
@@ -177,8 +178,8 @@ strong {
 /* Use demi bold font weight for some key areas */
 .codeheader, .quoteheader,
 .expand_pages,
-.table_head>th,
-.topic_sorting_row>h3, .topic_name h4 a,
+.table_head > th,
+.topic_sorting_row > h3, .topic_name h4 a,
 .poster .name,
 .keyinfo h5 a, .keyinfo h5 a strong,
 .ui-tabs .ui-tabs-nav .ui-state-active a, .ui-tabs .ui-tabs-nav .ui-state-active,
@@ -186,42 +187,42 @@ strong {
 .popup_heading {
 	font-weight: 600;
 	-webkit-font-smoothing: antialiased;
-	font-family: "Segoe UI Semibold", "Segoe UI", "Helvetica Neue Medium", "Helvetica Neue";
+	font-family: "Segoe UI Semibold", "Segoe UI", "Helvetica Neue Medium", "Helvetica Neue", serif;
 }
 
 /* @todo - Test this everywhere. */
 .standard_category {
 	border-radius: 4px 4px 0 0;
 	background: #1a1a1a;
-	box-shadow: 1px 2px 4px #7C7360;
+	box-shadow: 1px 2px 4px #7c7360;
 }
+
 /* @todo - Test this everywhere. */
-.standard_category>.content {
-	border: 1px solid #7C7360;
-	background: #1A1A1A;
+.standard_category > .content {
+	border: 1px solid #7c7360;
+	background: #1a1a1a;
 }
 
 /* Styles for main headers. */
 .category_header, .forum_category .category_header {
 	border: 1px solid #2f2f2f;
-	border-top: 1px solid #2f2f2f;
-	border-left: 1px solid #2f2f2f;
 	border-radius: 3px 3px 0 0;
-	background: #1E1E1E;
+	background: #1e1e1e;
 	color: #ababab;
 }
+
 /* Single ones a bit darker than board index ones. */
 .forumposts .category_header, .content_category .category_header {
 	border-top: 1px solid #2f2f2f;
-	border-bottom: 1px solid #1E1E1E;
-	background: #1e1e1e;
-	background-image: linear-gradient(to bottom, #1a1a1a, #222222);
+	border-bottom: 1px solid #1e1e1e;
+	background: #1e1e1e linear-gradient(to bottom, #1a1a1a, #222222);
 }
+
 /* Styles for subsection headers. @todo */
 .secondary_header {
-	border: 1px solid #1E1E1E;
+	border: 1px solid #1e1e1e;
 	border-top: 1px solid #2f2f2f;
-	background: #1E1E1E;
+	background: #1e1e1e;
 }
 
 .category_header a:link {
@@ -245,6 +246,7 @@ strong {
 	background: #d8ffdf;
 	color: #444;
 }
+
 ::selection {
 	background: #d8ffdf;
 	color: #444;
@@ -257,27 +259,30 @@ strong {
 
 /* Used for sections that need somewhat larger corners */
 .roundframe {
-	border: 1px solid #7C7360;
+	border: 1px solid #7c7360;
 	border-radius: 7px;
 	background: #222;
 }
 
 /* The generic wrapper thingy. */
 .generic_list_wrapper {
-	border: 1px solid #7C7360;
+	border: 1px solid #7c7360;
 	border-radius: 7px;
-	box-shadow: 0 -2px 2px rgba(0,0,0,0.1);
+	box-shadow: 0 -2px 2px rgba(0, 0, 0, 0.1);
 }
+
 .generic_list_wrapper .additional_row {
 	border-radius: 0;
 }
+
 .generic_list_wrapper .title_bar {
-	border-bottom: 1px solid #7C7360;
+	border-bottom: 1px solid #7c7360;
 	border-radius: 0;
 	background: none;
 }
+
 .generic_list_wrapper .information {
-	border-bottom: 1px solid #7C7360;
+	border-bottom: 1px solid #7c7360;
 	background: none;
 }
 
@@ -287,112 +292,127 @@ strong {
 	border-radius: 2px;
 	background: #232323;
 }
+
 .auto_suggest_div:focus {
 	border: 1px solid #bbb;
 }
+
 .auto_suggest_item {
 	background: #222;
-	color: #CFCFCF;
+	color: #cfcfcf;
 }
+
 .auto_suggest_item_hover {
 	background: #333;
-	color: #CFCFCF;
+	color: #cfcfcf;
 }
 
 /*	$BBC		*/
 /* ------------------------------------------------------- */
 /* The "Quote:" and "Code:" header parts... */
 .codeheader, .quoteheader {
-	border: 1px solid #7C7360;
+	border: 1px solid #7c7360;
 	border-bottom: none;
 	color: #555;
-	background: #1a1a1a;
-	background-image: linear-gradient(to bottom, #1a1a1a, #222222);background: #1e1e1e;
+	background-image: linear-gradient(to bottom, #1a1a1a, #222222);
+	background: #1e1e1e;
 }
+
 /* [Select] link to copy code. */
 .codeoperation {
 	font-weight: normal;
 }
+
 /* A quote, perhaps from another post. */
 .bbc_standard_quote, .bbc_alternate_quote,
-/* A code block - maybe PHP ;) - shared styles. */
+	/* A code block - maybe PHP ;) - shared styles. */
 .bbc_code {
-	border: 1px solid #7C7360;
+	border: 1px solid #7c7360;
 	border-top: none;
-	background: #1A1A1A;
+	background: #1a1a1a;
 }
+
 /* Extra quote styling */
 .bbc_standard_quote, .bbc_alternate_quote, .quoteheader {
-	box-shadow: 1px 1px 2px #7C7360;
+	box-shadow: 1px 1px 2px #7c7360;
 }
+
 /* Extra code block styling. */
 .bbc_code {
-	border-top: 3px solid #7C7360;
-	border-bottom: 3px solid #7C7360;
+	border-top: 3px solid #7c7360;
+	border-bottom: 3px solid #7c7360;
 	background: #222;
 }
+
 /* Styling for BBC tags */
 .bbc_link:link, .bbc_link:visited {
-	color: #006FAE;
+	color: #006fae;
 	box-shadow: 0 -1px 0 #cedccb inset;
 }
+
 .bbc_link:hover {
-	color: #006FAE;
+	color: #006fae;
 	box-shadow: 0 -1px 0 #66aa55 inset;
 	text-decoration: none;
 }
+
 /* plain text in prettify code */
 .pln {
-    color: #afafaf !important;
+	color: #afafaf !important;
 }
+
 /* /me uses this a lot. (emote, try typing /me in a post.) */
 .meaction {
 	color: #50aa3a;
 }
+
 .meaction:before {
 	content: "\270c";
 	font-size: 1.714em;
 	line-height: 1em;
 }
+
 .spoilerheader {
 	font-weight: bold;
 	cursor: pointer;
 	font-size: 0.857em;
 }
+
 .spoiler {
-	border: 1px solid #7C7360;
+	border: 1px solid #7c7360;
 	padding: 0.3em;
-	background-color: #7C7360;
+	background-color: #7c7360;
 }
+
 div.bbc_footnotes {
 	border-top: 1px solid #bfbfbf;
 }
+
 .bbc_footnotes .target:target {
 	background-color: #d8ffdf;
 }
+
 sup.bbc_footnotes, sup.bbc_footnotes a {
 	color: #50aa3a;
 	font-weight: 700;
 }
-div.bbc_footnotes .meaction{
+
+div.bbc_footnotes .meaction {
 	display: inline-block;
 }
-
 
 /*	$AJAX		*/
 /* ------------------------------------------------------- */
 /* The "Loading" bar for quick edit, etc. */
 #ajax_in_progress {
 	border-bottom: 4px solid #3d6e32;
-	background: #1A1A1A;
+	background: #1a1a1a;
 	color: #306430;
 }
+
 #ajax_in_progress a {
 	text-decoration: underline;
 }
-
-
-
 
 /*	$MAIN.		*/
 /* ------------------------------------------------------- */
@@ -405,47 +425,57 @@ div.bbc_footnotes .meaction{
 	border-bottom: 5px solid #222;
 
 }
+
 /* Maintenance mode warning. */
 .notice {
 	font-weight: 700;
 	color: #a80000;
 }
+
 #search_form .input_text {
 	border-radius: 2px 0 0 2px;
 	border-right: none;
 }
+
 #search_form .button_submit {
 	border-radius: 0 2px 2px 0;
 	font-variant: small-caps;
 	color: #333;
 }
+
 #search_form .button_submit:hover {
 	color: #888;
 }
+
 #search_form select {
-	border: 1px solid #7C7360;
+	border: 1px solid #7c7360;
 	border-right: none;
 	opacity: 0.8;
 }
+
 #search_form select:focus {
 	border: 1px solid #999;
 	border-right: none;
 	opacity: 1;
 }
+
 #simple_search, #advanced_search {
-    margin: 4px;
+	margin: 4px;
 }
-.forumtitle>a {
-	color: #006FAE;
+
+.forumtitle > a {
+	color: #006fae;
 	text-shadow: 1px 1px 0 #fff;
 }
+
 /* News section. */
 #news {
 	font-size: 0.929em;
 }
-#news>h2 {
+
+#news > h2 {
 	float: left;
-	color: #0689C8;
+	color: #0689c8;
 	font-size: 1.286em;
 	line-height: 1.286em;
 	font-weight: 700;
@@ -453,9 +483,11 @@ div.bbc_footnotes .meaction{
 	margin: -2px 1em 0 0;
 	height: 1em;
 }
-#news>h2:after {
+
+#news > h2:after {
 	content: "\2026";
 }
+
 #news_line, #news {
 	padding: 6px 12px;
 	border: 1px solid #2f2f2f;
@@ -467,6 +499,7 @@ div.bbc_footnotes .meaction{
 	overflow: auto;
 	resize: vertical;
 }
+
 /* Main forum area. */
 /* Box-shadow only on this one. */
 #wrapper {
@@ -478,15 +511,18 @@ div.bbc_footnotes .meaction{
 	padding-top: 12px;
 	background: url(../../images/_dark/bk_content.jpg) repeat scroll 0 0 rgba(0, 0, 0, 0);
 }
+
 /* The footer with copyright links etc. */
 #footer_section {
 	color: #bbb;
 	background: #222;
 	border-top: 4px solid #000;
 }
+
 #footer_section p, #footer_section a {
 	color: #bbb;
 }
+
 #footer_section .rssfeeds {
 	color: orange;
 	background-color: white;
@@ -497,6 +533,7 @@ div.bbc_footnotes .meaction{
 #debug_logging a, #debug_logging strong {
 	color: yellow;
 }
+
 #debug_logging {
 	color: #bbb;
 	background: #222;
@@ -504,10 +541,10 @@ div.bbc_footnotes .meaction{
 	max-width: 90em;
 	width: 90%;
 }
+
 #debug_logging_wrapper {
 	background: #222;
 }
-
 
 /*	$MENUS		*/
 /* ------------------------------------------------------- */
@@ -516,7 +553,6 @@ div.bbc_footnotes .meaction{
 	border-radius: 2px;
 	border: 1px solid #232323;
 	color: #333;
-	background: #1E1E1E;
 	background: #ababab;
 }
 
@@ -525,7 +561,7 @@ div.bbc_footnotes .meaction{
 .linklevel2:hover, .listlevel2:hover .linklevel2,
 .linklevel3:hover, .listlevel3:hover .linklevel3,
 #menu_sidebar .linklevel1:hover, #menu_sidebar .listlevel1:hover .linklevel1,
-#menu_current_area>strong>.linklevel1 {
+#menu_current_area > strong > .linklevel1 {
 	border: 1px solid #232323;
 	border-radius: 5px;
 	background: #1a1a1a;
@@ -533,21 +569,23 @@ div.bbc_footnotes .meaction{
 	box-shadow: -1px -1px 2px #7c7360 inset;
 	text-decoration: none;
 }
+
 .poster li.listlevel1:hover {
 	border: 0 solid #232323;
 	box-shadow: none;
 }
+
 .poster li.poster_online:hover .linklevel1 {
 	border: 1px solid #232323;
 	background: #1a1a1a;
 	color: #555;
 }
+
 .poster li.poster_online .nolink {
 	border: 1px solid #afafaf;
 	border-top: 1px solid #cfcfcf;
 	border-left: 1px solid #bfbfbf;
-	background: #f4f4f4;
-	background-image: linear-gradient(to bottom, #fff, #e4e4e4);
+	background: #f4f4f4 linear-gradient(to bottom, #fff, #e4e4e4);
 	box-shadow: 1px 1px 2px #e5e5e5;
 	color: #566e4b;
 	display: block;
@@ -555,14 +593,17 @@ div.bbc_footnotes .meaction{
 	margin: 3px 1.5em;
 	position: relative;
 }
+
 .poster li.poster_online .nolink img {
 	vertical-align: middle;
 }
+
 .poster li.subsections.listlevel1:hover .linklevel1 {
 	background: transparent;
 	border: none;
 	box-shadow: none;
 }
+
 /* Level 1 active buttons. */
 .linklevel1.active, .listlevel1:hover .active,
 #collapse_button .linklevel1, .pm_indicator, .likes_indicator {
@@ -572,41 +613,49 @@ div.bbc_footnotes .meaction{
 	font-weight: bold;
 	box-shadow: 1px 1px 2px #000;
 }
+
 /* Hover effects for those buttons. */
-.linklevel1.active:hover,.listlevel1:hover .linklevel1.active,
+.linklevel1.active:hover, .listlevel1:hover .linklevel1.active,
 #collapse_button .linklevel1:hover, .linklevel1:hover .pm_indicator {
 	border: 1px solid #232323;
 	background: #666;
 }
+
 .linklevel1.active:hover .pm_indicator {
 	border-bottom: 1px solid #000;
 }
+
 /* Top level subsection indicators. */
 /* Comment these out if you don't want them. */
 #main_menu .subsections:hover .linklevel1:after {
 	top: 88%;
 	font-size: 1.429em;
-	color: #7C7360;
+	color: #7c7360;
 	text-shadow: 0 4px 0 #3d6e32;
 }
+
 .admin_menu .subsections:hover .linklevel1:after {
 	top: 72%;
 	color: #3d6e32;
 	font-size: 1.214em;
 }
+
 /* Corrections for other menus. */
 .quickbuttons .subsections:hover .linklevel1:after {
 	top: 1.9em;
 	font-size: 1em;
 }
+
 .subsections:hover .name.linklevel1:after {
 	top: 1.6em;
 	font-size: 1em;
 	color: #1fa2e1;
 }
+
 .poster2 .subsections:hover .name.linklevel1:after {
 	top: 1em;
 }
+
 /* Do one override here for .poster. Still saves code all round. */
 .poster_avatar .linklevel1, .poster_avatar:hover .linklevel1,
 .poster_avatar .linklevel1:focus,
@@ -614,11 +663,13 @@ div.bbc_footnotes .meaction{
 	background: none;
 	border: none;
 	box-shadow: none;
-	color: #0689C8;
+	color: #0689c8;
 }
+
 .name.linklevel1:hover {
 	text-decoration: underline;
 }
+
 /* Levels 2 and 3: drop menu wrapper. */
 .menulevel2, .menulevel3 {
 	border: 1px solid #555;
@@ -626,6 +677,7 @@ div.bbc_footnotes .meaction{
 	background: #232323;
 	background: url(../../images/_dark/bk_content.jpg) repeat scroll 0 0 rgba(0, 0, 0, 0);
 }
+
 /* Tricky PM indicator. Define it carefully,
 /* just in case someone tries to use this class elsewhere. */
 .pm_indicator, .likes_indicator {
@@ -640,30 +692,36 @@ div.bbc_footnotes .meaction{
 	font-size: 0.929em;
 	z-index: 2;
 }
+
 .poster .pm_indicator {
 	font-size: 1em;
 }
+
 #dropdown_menu_1 .pm_indicator {
 	margin-top: 5px;
 	margin-right: 2px;
 }
+
 .likes_indicator {
 	font-size: .857em;
-	box-shadow: 2px 2px 2px rgba(0,0,0,0.25);
+	box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
 	border-radius: 6px 6px 6px 0;
 	line-height: 1.5em;
 	top: -1.2em;
 }
+
 /* Levels 2 and 3 drop menus: link or button. */
 .linklevel2:link, .linklevel2:visited, .linklevel3:link, .linklevel3:visited {
 	border: 1px solid transparent;
 	color: #afafaf;
 }
+
 /* Admin menu icons. */
-.linklevel2>img {
+.linklevel2 > img {
 	margin: 0 0 0 -4px;
 	vertical-align: middle;
 }
+
 /* Level 2: subsection indicators. */
 .listlevel2.subsections .linklevel2:after,
 #menu_sidebar .subsections .linklevel1:after,
@@ -675,6 +733,7 @@ div.bbc_footnotes .meaction{
 	content: "\2192";
 	font-size: 1.286em;
 }
+
 /* Level 2: dividers between admin/moderation, and pm/profile links. */
 #button_admin .listlevel2.subsections, #button_pm .listlevel2.subsections {
 	margin-top: 7px;
@@ -682,6 +741,7 @@ div.bbc_footnotes .meaction{
 	border-top: 1px solid #ddd;
 	box-shadow: 0 -1px 0 #bbb;
 }
+
 /* Levels 2 and 3: highlighting of current section */
 /* @todo - Should probably be applied to main menu as well, for consistency. */
 .linklevel2.chosen, .linklevel3.chosen,
@@ -698,8 +758,8 @@ div.bbc_footnotes .meaction{
 	box-shadow: none;
 	color: #afafaf;
 }
-/*End sidebar flyout coding. */
 
+/*End sidebar flyout coding. */
 
 /*	$BOARDICONS	*/
 /* ------------------------------------------------------- */
@@ -709,6 +769,7 @@ div.bbc_footnotes .meaction{
 	width: 48px;
 	height: 48px;
 }
+
 .board_key:before {
 	display: block;
 	float: left;
@@ -716,32 +777,38 @@ div.bbc_footnotes .meaction{
 	width: 26px;
 	content: "";
 }
+
 .category_boards .board_icon, .board_key:before {
-	background-repeat: no-repeat;
-	background-image: url(../../images/_dark/board_icons.png);
+	background: url(../../images/_dark/board_icons.png) no-repeat;
 }
+
 .on_board {
 	background-position: 0 0;
 }
+
 .on2_board {
 	background-position: -72px 0;
 }
+
 .off_board {
 	background-position: -144px 0;
 }
+
 .redirect_board {
 	background-position: -216px 0;
 }
+
 .new_some_board:before {
 	background-position: -300px -14px;
 }
+
 .new_none_board:before {
 	background-position: -372px -14px;
 }
+
 .new_redirect_board:before {
 	background-position: -444px -14px;
 }
-
 
 /*	$LINKTREE	*/
 /* ------------------------------------------------------- */
@@ -750,37 +817,42 @@ div.bbc_footnotes .meaction{
 .navigate_section {
 	border: 1px solid #2f2f2f;
 	border-radius: 2px;
-	background: #1E1E1E;
+	background: #1e1e1e;
 	box-shadow: 1px 2px 3px #2f2f2f;
 }
+
 /* Color for linktree items. */
 .linktree a {
 	color: #555;
 }
+
 .linktree {
 	border-bottom: 1px solid #000;
 	box-shadow: 0 -2px 0 -1px #000, 3px -2px 0 -1px #000, 3px 1px 0 -1px #000;
 }
-.linktree:hover a, .linktree>a:hover,
-.linktree:last-child, .linktree:last-child>span>a,
-.linktree:last-child>a:hover, .linktree:last-child strong {
+
+.linktree:hover a, .linktree > a:hover,
+.linktree:last-child, .linktree:last-child > span > a,
+.linktree:last-child > span > a:hover, .linktree:last-child strong {
 	color: #fff;
 	text-decoration: none;
 }
+
 .linktree:after {
 	box-shadow: 2px -2px 0 1px rgba(0, 0, 0, 0.9);
 	background: #1e1e1e;
 }
+
 .linktree:hover, .linktree:last-child {
-	background: #1fa2e1;
-	background-image: linear-gradient(0deg, #0689C8, #1fa2e1);
+	background: #1fa2e1 linear-gradient(0deg, #0689c8, #1fa2e1);
 }
+
 .linktree:hover:after, .linktree:last-child:after {
-	background: #1fa2e1;
-	background-image: linear-gradient(-45deg, #0689C8, #1fa2e1);
+	background: #1fa2e1 linear-gradient(-45deg, #0689c8, #1fa2e1);
 }
+
 .linktree:last-child:hover, .linktree:last-child:hover:after {
-	background: #0689C8;
+	background: #0689c8;
 }
 
 /*	$BUTTONS	*/
@@ -795,9 +867,10 @@ div.bbc_footnotes .meaction{
 .buttonlist li a.linklevel1 {
 	text-transform: uppercase;
 }
+
 /* The active one */
 .buttonlist li a.active {
-	box-shadow: 1px 1px 2px #7C7360;
+	box-shadow: 1px 1px 2px #7c7360;
 }
 
 /* The quick buttons. */
@@ -805,56 +878,65 @@ div.bbc_footnotes .meaction{
 .quickbuttons .modified {
 	color: #777;
 }
+
 /* Cancel generic border-radius. */
 .quickbuttons .linklevel1 {
 	color: #333;
 	border-radius: 0;
 }
+
 /* Radius left end of the first (Quote) button. */
 .linklevel1.quote_button {
 	border-radius: 2px 0 0 2px;
 }
+
 /* Radius right end of the last button. */
 .linklevel1.post_options, .linklevel1.remove_button {
 	border-radius: 0 2px 2px 0;
 }
+
 /* Single buttons get all corners rounded. */
 .follow_ups .linklevel1, #topic_summary .linklevel1 {
 	border-radius: 2px;
 }
-
 
 /*	$PAGELINKS	*/
 /* ------------------------------------------------------- */
 .selectbox, .pagelinks {
 	color: #555;
 }
+
 .pagelinks .navPages {
 	border: 1px solid #ababab;
 	color: #ababab;
 	margin-right: 3px;
 }
+
 .pagelinks .navPages:hover, .pagelinks .current_page {
-	border: 1px solid #7C7360;
+	border: 1px solid #7c7360;
 	background: #666;
-	box-shadow: 2px 1px 1px rgba(0,0,0,0.07) inset;
+	box-shadow: 2px 1px 1px rgba(0, 0, 0, 0.07) inset;
 	/* @todo - Simplify. */
 	color: #fff;
 	text-decoration: none;
 	margin-right: 3px;
 }
+
 .pagelinks :first-child {
 	border-radius: 2px 0 0 2px;
 }
+
 .pagelinks :last-child {
 	border-radius: 0 2px 2px 0;
 }
+
 /* our buddies &laquo; &raquo; */
 .small_pagelinks:before {
 	content: '\00AB';
 	float: left;
 	font-size: 1.286em;
 }
+
 .small_pagelinks:after {
 	content: '\00BB';
 	float: left;
@@ -866,26 +948,28 @@ div.bbc_footnotes .meaction{
 	border: 1px solid #222;
 	border-bottom: none;
 	border-radius: 0 20px 0 0;
-	background: #7C7360;
-	color: #7C7360;
+	background: #7c7360;
+	color: #7c7360;
 	opacity: 0.2;
 }
+
 #gobottom {
 	border-top: none;
 	border-radius: 0 0 20px 0;
 }
+
 #gotop:hover, #gobottom:hover {
 	color: #444;
 	text-decoration: none;
 	opacity: 1;
 }
+
 /* Skip navigation link. */
 #top {
 	border: 4px solid #1fa2e1;
 	border-radius: 0 0 6px 6px;
-	background: #1A1A1A;
+	background: #1a1a1a;
 }
-
 
 /*	$TABLES		*/
 /* ------------------------------------------------------- */
@@ -893,25 +977,30 @@ div.bbc_footnotes .meaction{
 /* @todo */
 /* A general table class. */
 .table_grid {
-	border: 1px solid #7C7360;
+	border: 1px solid #7c7360;
 	border-top: none;
 }
-.table_head>th {
-	border-top: 2px solid #7C7360;
-	border-bottom: 2px solid #7C7360;
-	background: #1A1A1A;
+
+.table_head > th {
+	border-top: 2px solid #7c7360;
+	border-bottom: 2px solid #7c7360;
+	background: #1a1a1a;
 	color: #555;
 }
+
 /* Basic cells. */
 .table_grid td, .letterspacing {
-	border-bottom: 1px solid #7C7360;
+	border-bottom: 1px solid #7c7360;
 }
+
 .table_grid .standard_row:nth-child(even) {
 	background: #1a1a1a;
 }
+
 .table_grid .standard_row {
 	background: #1a1a1a;
 }
+
 /* Legacy highlight color, for selected membergroups etc. */
 /* Used by JS to show a selected item. Still used in manage languages */
 .table_grid .standard_row.highlight2 {
@@ -940,103 +1029,129 @@ div.bbc_footnotes .meaction{
 	background: #1a1a1a;
 	box-shadow: 1px 1px 3px #333;
 }
+
 /* @todo - Clean this up, once new classes are assigned to old windowbg stuffz. */
-.board_row, .childboard_row, .forumposts>div, .forumposts>li,
-.content_category>div, .content_category>li {
-	border: 0 solid #7C7360;
+.board_row, .childboard_row, .forumposts > div, .forumposts > li,
+.content_category > div, .content_category > li {
+	border: 0 solid #7c7360;
 	background: #1a1a1a;
 	color: #afafaf;
 	margin: 0;
 }
+
 .forumposts .windowbg, .forumposts .windowbg2 {
 	margin-top: 2px;
 }
+
 .board_row.parent_board {
 	border-bottom: none;
 }
+
 .childboard_row {
 	border-top: none;
 }
+
 .board_latest {
-	border-left: 1px solid #7C7360;
+	border-left: 1px solid #7c7360;
 }
-.board_name >a {
+
+.board_name > a {
 	color: #736c5c;
 }
+
 .board_stats {
 	color: #777;
 }
-.lastpost_link>a {
-	color: #006FAE;
+
+.lastpost_link > a {
+	color: #006fae;
 }
+
 .board_latest strong {
 	color: #777;
 }
+
 .childboards {
-	border-top: 1px solid #7C7360;
+	border-top: 1px solid #7c7360;
 }
+
 .childboard_row h4, .board_new_posts {
 	font-weight: 700;
 	color: #777;
 }
+
 /* Styles for the info center on the board index. */
 .ic_section_header {
-	border-bottom: 1px solid #7C7360;
+	border-bottom: 1px solid #7c7360;
 }
-.ic_section_header>a {
+
+.ic_section_header > a {
 	color: #afafaf;
 }
+
 #ic_recentposts td, #ps_recentposts td, #ps_recenttopics td {
 	border-top: 1px solid #1a1a1a;
 }
-.recentpost>strong>a, .inline>strong>a {
+
+.recentpost > strong > a, .inline > strong > a {
 	color: #1fa2e1;
 }
+
 #expanded_pages_container a {
-	background: #1A1A1A;
+	background: #1a1a1a;
 }
+
 /* The board description and who-is-viewing stuff. */
 #description_board {
 	background: #1e1e1e;
 	border-radius: 4px 4px 0 0;
-	box-shadow: 1px 2px 4px #7C7360;
+	box-shadow: 1px 2px 4px #7c7360;
 }
+
 #description_board .generalinfo, #forumposts .generalinfo {
 	background: #1e1e1e;
-	border-bottom: 1px solid #7C7360;
-	border-top: 1px solid #7C7360;
+	border-bottom: 1px solid #7c7360;
+	border-top: 1px solid #7c7360;
 }
+
 .topic_listing {
 	background: #e4e4e4;
-	box-shadow: 1px 2px 4px #7C7360;
+	box-shadow: 1px 2px 4px #7c7360;
 }
 
 .basic_row:nth-child(even) {
 	background: #1a1a1a;
 }
+
 .basic_row:nth-child(odd) {
 	background: #222222;
 }
+
 .topic_sorting_row {
 	background: transparent;
 }
+
 #sort_by {
-	border: 2px solid #7C7360;;
+	border: 2px solid #7c7360;;
 	border-bottom: none;
 	border-radius: 5px 5px 0 0;
 	margin-bottom: -5px;
 }
+
 #sort_by.topic_sorting_recent {
 	border: 1px solid #d1d1d1;
 	border-bottom: none;
 }
+
 .sort_by_container {
-	border: 1px solid #7C7360;
+	border: 1px solid #7c7360;
 	border-radius: 2px;
 }
+
 .topic_name h4 a {
-	color: #0689C8;
+	color: #0689c8;
 }
+
 .sticky_row .topic_name h4 a, .locked_row.sticky_row .topic_name h4 a {
 	color: #555;
 }
@@ -1044,40 +1159,47 @@ div.bbc_footnotes .meaction{
 .locked_row .topic_name h4 a {
 	color: #777;
 }
+
 .sticky_row .topic_name h4 a.new_posts, .locked_row.sticky_row .topic_name h4 a.new_posts, .locked_row .topic_name h4 a.new_posts {
 	color: #fff;
 }
+
 .topic_stats {
 	color: #777;
 }
+
 .qaction_row {
 	background: #1e1e1e;
 }
+
 .approvetopic_row, .approve_row {
 	background: #fff5cd;
 }
+
 .sticky_row, .locked_row.sticky_row {
 	background: #222222;
 }
+
 .locked_row, .locked_row.core_posts {
 	background: #222222;
 }
+
 #topic_icons {
-	border: 1px solid #7C7360;
+	border: 1px solid #7c7360;
 	border-radius: 3px;
 	background: #1e1e1e;
 }
+
 .jump_to_header {
-	background: #ebebeb;
-	background-image: linear-gradient(to bottom, #fafafa, #eaeaea);
+	background: #ebebeb linear-gradient(to bottom, #fafafa, #eaeaea);
 	color: #566450;
-	box-shadow: 2px 1px rgba(1,1,1,0.07) inset;
+	box-shadow: 2px 1px rgba(1, 1, 1, 0.07) inset;
 }
+
 .jump_to_header:hover {
 	background: #f0f0f0;
 	color: #555;
 }
-
 
 /*	$TOPICS		*/
 /* ------------------------------------------------------- */
@@ -1090,20 +1212,21 @@ div.bbc_footnotes .meaction{
 
 /* Poll results */
 #poll_options .options .percentage {
-	background: #1A1A1A;
+	background: #1a1a1a;
 }
 
 /* On to the posts */
 .forumposts {
 	border-radius: 4px 4px 0 0;
 	background: #222;
-	box-shadow: 1px 2px 4px #7C7360;
+	box-shadow: 1px 2px 4px #7c7360;
 }
+
 /* Poster and postarea + moderation area underneath */
 .forumposts .windowbg, .forumposts .windowbg2,
 .forumposts .approvebg, .forumposts .approvebg2, .core_posts {
 
-	background: #1A1A1A;
+	background: #1a1a1a;
 }
 
 /* Colors for background of posts requiring approval */
@@ -1120,27 +1243,32 @@ div.bbc_footnotes .meaction{
 .poster .listlevel1.sfhover .menulevel2, .poster .listlevel1:hover .menulevel2 {
 	background: url(../../images/_dark/bk_content.jpg) repeat scroll 0 0 rgba(0, 0, 0, 0);
 }
+
 .report_seperator {
 	background: #bbb;
-	border-bottom: 1px solid #7C7360;
+	border-bottom: 1px solid #7c7360;
 	max-width: 14em;
 }
+
 /* @todo - Save code by amalgamating common button background declarations. */
 .poster_online .linklevel1 {
-	border: 1px solid #7C7360;
+	border: 1px solid #7c7360;
 	border-radius: 2px;
 	background: #ababab;
-	box-shadow: 1px 1px 2px #7C7360;
+	box-shadow: 1px 1px 2px #7c7360;
 }
+
 .poster_online .linklevel1:hover {
-	border: 1px solid #7C7360;
+	border: 1px solid #7c7360;
 	background: #ccc;
 	color: #222;
 	text-decoration: none;
 }
+
 .post_subject {
 	color: #777;
 }
+
 /* @todo - Move strong tag outside anchor. Will save css. */
 .keyinfo h5 a, .keyinfo h5 a strong {
 	color: #1fa2e1;
@@ -1149,15 +1277,18 @@ div.bbc_footnotes .meaction{
 .inner {
 	border-top: 1px solid #222;
 }
+
 /* All the signatures used in the forum. */
 .signature, .attachments, .custom_fields_above_signature {
 	border-top: 1px solid #222;
 }
+
 /* Used by video embed JS when autolinking video links */
 .elk_video {
 	border: #27a348 1px solid;
 	border-top: 0;
 }
+
 .elk_videoheader {
 	border: #27a348 1px solid;
 }
@@ -1167,13 +1298,13 @@ div.bbc_footnotes .meaction{
 	border: 10px solid transparent;
 	border-bottom-color: #437837;
 }
+
 .requiredfield {
-	color: #FFFFFF;
+	color: #ffffff;
 	background: #437837;
-	border-bottom: 1px solid #5aa049;
-	border-left: 1px solid #2d5024;
-	border-right: 1px solid #5aa049;
-	border-top: 1px solid #2d5024;
+	border: 1px solid #2d5024;
+	border-right-color: #5aa049;
+	border-bottom-color: #5aa049;
 }
 
 /*	$EDITOR		*/
@@ -1183,34 +1314,37 @@ div.bbc_footnotes .meaction{
 #preview_body {
 	border: 1px solid #ddd;
 	border-bottom: 1px solid #ccc;
-	background: #1A1A1A;
+	background: #1a1a1a;
 }
 
 #postAdditionalOptionsHeader, #postDraftOptionsHeader {
-	background: #1e1e1e;
-	background-image: linear-gradient(to bottom, #1a1a1a, #222222);
+	background: #1e1e1e linear-gradient(to bottom, #1a1a1a, #222222);
 	border: 1px solid #2f2f2f;
 }
+
 #postAdditionalOptions, #postDraftOptions {
 	border: 1px solid #2f2f2f;
 	border-radius: 0 0 4px 4px;
 	background: #1e1e1e;
 	border-top: none;
 }
+
 #postAdditionalOptionsNC {
-	border: 1px solid #7C7360;
+	border: 1px solid #7c7360;
 	border-radius: 4px;
 	background: #fdfdfd;
 }
+
 .drop_area {
 	-webkit-font-smoothing: antialiased;
 	color: #444444;
 	background-color: rgb(230, 230, 230);
 	border: dashed 1px #ccc;
 }
+
 .statusbar {
-	border-top: 1px solid #A9CCD1;
-	border-bottom: 1px solid #A9CCD1;
+	border-top: 1px solid #a9ccd1;
+	border-bottom: 1px solid #a9ccd1;
 	background: rgb(241, 241, 241);
 }
 
@@ -1224,27 +1358,29 @@ div.bbc_footnotes .meaction{
 }
 
 .abort, .remove {
-	background-color: #A8352F;
+	background-color: #a8352f;
 	border-radius: 5px;
 	color: #fff;
 	cursor: pointer;
 }
+
 .drop_attachments_error {
 	color: #ff0000;
 }
 
 #postMoreOptions, #postAttachment, #postAttachment2 {
-	border-top: 1px solid #7C7360;
+	border-top: 1px solid #7c7360;
 }
 
-#postDraftOptions .settings dd, #postDraftOptions .settings dt{
-	border-top: 1px solid #7C7360;
+#postDraftOptions .settings dd, #postDraftOptions .settings dt {
+	border-top: 1px solid #7c7360;
 }
+
 /*	$MODERATE	*/
 /* ------------------------------------------------------- */
 
 .split_messages .post {
-	border-top: 1px solid #7C7360;
+	border-top: 1px solid #7c7360;
 }
 
 /* Styles for the $TABS	*/
@@ -1258,21 +1394,26 @@ div.bbc_footnotes .meaction{
 	color: #fff;
 	border-bottom-color: #ccc;
 }
+
 .ui-tabs .ui-tabs-nav li a {
 	background: #f0f0f0;
 	outline: none;
 }
+
 .ui-tabs .ui-tabs-nav .ui-state-default a {
 	background: #afafaf;
 	color: #333;
 }
+
 .ui-tabs .ui-tabs-nav .ui-state-active a, .ui-tabs .ui-tabs-nav .ui-state-active {
 	background: #437837;
-	background: linear-gradient(to bottom, #1fa2e1, #0689C8) repeat scroll 0 0 #0689C8;
+	background: linear-gradient(to bottom, #1fa2e1, #0689c8) repeat scroll 0 0 #0689c8;
 	color: #fff;
 	border-radius: 2px 2px 0 0;
 }
-.ui-tabs .ui-tabs-nav .ui-state-hover a {
+
+.ui-tabs .ui-state-hover {
+
 	background: #1a1a1a;
 	color: #555;
 	text-decoration: none;
@@ -1283,52 +1424,53 @@ div.bbc_footnotes .meaction{
 /* Profile colors */
 
 .ui-tabs .ui-tabs-panel {
-	background: none repeat scroll 0 0 #1A1A1A;
+	background: none repeat scroll 0 0 #1a1a1a;
 	border: 1px solid #222;
 	border-top: 1px #fff solid;
 }
+
 #profilecenter, #profile_attachments, #unwatched_topics {
-	background: #1A1A1A;
-	border: 1px solid #7C7360;
+	background: #1a1a1a;
+	border: 1px solid #7c7360;
 	border-radius: 7px;
-	box-shadow: 0 -2px 2px rgba(0,0,0,0.1);
+	box-shadow: 0 -2px 2px rgba(0, 0, 0, 0.1);
 }
+
 #profilecenter .windowbg, #profilecenter .windowbg2,
 #profile_attachments .windowbg, #profile_attachments .windowbg2,
 #unwatched_topics .windowbg, #unwatched_topics .windowbg2 {
 	border: none;
-	background: #1A1A1A;
+	background: #1a1a1a;
 }
+
 .profileblock {
-	background: none repeat scroll 0 0 #1A1A1A;
+	background: none repeat scroll 0 0 #1a1a1a;
 }
+
 .profileblock ul li:not(:first-child):before {
 	content: "\20\7C\20";
 }
+
 #detailedinfo dt, #tracking dt, .profileblock dt {
 	color: #555;
 }
 
 .activity_stats li span {
-	border: solid #555;
-	border-width: 1px 1px 1px 1px;
-	border-right: none;
-	border-left: none;
-	background: #7C7360;
-}
-.activity_stats li .bar {
-	border: 1px solid #7C7360;
-	border-bottom: none;
-	background: #1A1A1A;
-}
-.activity_stats li .bar div {
-	background: #47b263;
-	background-image: linear-gradient(to bottom, #1fa2e1 0%, #0689C8 100%);
-}
-.profile_pie {
-	background: url(../../images/_dark/stats_pie.png);
+	border: 1px solid #555;
+	border-right-style: none;
+	border-left-style: none;
+	background: #7c7360;
 }
 
+.activity_stats li .bar {
+	border: 1px solid #7c7360;
+	border-bottom: none;
+	background: #1a1a1a;
+}
+
+.activity_stats li .bar div {
+	background: #47b263 linear-gradient(to bottom, #1fa2e1 0%, #0689c8 100%);
+}
 
 .topic_details {
 	border-bottom: 1px solid #999;
@@ -1337,14 +1479,17 @@ div.bbc_footnotes .meaction{
 .ignoreboards a {
 	border-bottom: 1px solid #c4c4c4;
 }
+
 .ignoreboards a:hover {
 	border-bottom: 1px solid #555;
 	text-decoration: none;
 }
+
 .vcard, .profile_attachment {
-	border: 1px solid #7C7360;
+	border: 1px solid #7c7360;
 	border-radius: 6px;
 }
+
 .attachment_title {
 	border-bottom: 1px solid #ccc;
 }
@@ -1352,16 +1497,18 @@ div.bbc_footnotes .meaction{
 #warndiv .ui-widget-header {
 	background: transparent;
 }
+
 #warndiv .watched .ui-widget-header {
 	background: green;
 }
+
 #warndiv .moderated .ui-widget-header {
 	background: orange;
 }
+
 #warndiv .muted .ui-widget-header {
 	background: red;
 }
-
 
 /* $PERSONAL	*/
 /* ------------------------------------------------------- */
@@ -1369,18 +1516,23 @@ div.bbc_footnotes .meaction{
 #personal_messages .capacity_bar {
 	border: 1px solid #adadad;
 }
+
 #personal_messages .capacity_bar span {
 	border-right: 1px solid #adadad;
 }
+
 #personal_messages .capacity_bar .empty {
 	background: #a6d69d;
 }
+
 #personal_messages .capacity_bar .filled {
 	background: #eea800;
 }
+
 #personal_messages .capacity_bar .full {
 	background: #f10909;
 }
+
 .addrules dt.floatleft {
 	color: #555;
 }
@@ -1391,53 +1543,68 @@ div.bbc_footnotes .meaction{
 .birthday {
 	color: #920ac4;
 }
+
 .event {
 	color: #078907;
 }
+
 .holiday {
 	color: #555080;
 }
+
 .calendar_table {
-	border-top: 1px solid #1E1E1E;
+	border-top: 1px solid #1e1e1e;
 	background: #222222;
 }
+
 .calendar_table th, .calendar_table td {
-	background: #1A1A1A;
+	background: #1a1a1a;
 }
+
 /* Used to indicate the current day. */
 #main_grid .calendar_today, #month_grid .calendar_today {
 	border: 1px solid #aaa;
 	background: #111;
 }
+
 #main_grid .weeks {
 	font-weight: normal;
 	font-size: 1em;
 }
+
 #main_grid .weeks a:hover {
 	text-decoration: none;
 }
+
 #main_grid .days {
 	vertical-align: top;
 }
+
 .weeklist {
 	background: #e4e4e4;
 }
-.weeklist>li {
+
+.weeklist > li {
 	border: 1px solid #222222;
-	background: #1A1A1A;
+	background: #1a1a1a;
 }
+
 .weekdays {
 	border-left: 2px solid #222222;
 }
+
 .weeklist h4 a:hover {
 	text-decoration: none;
 }
+
 .modify_event {
 	color: red;
 }
+
 .hidelink {
 	font-style: italic;
 }
+
 /* Add a background that fits with the calendar. */
 #calendar_navigation {
 	border: 1px solid #222222;
@@ -1448,38 +1615,41 @@ div.bbc_footnotes .meaction{
 /* ------------------------------------------------------- */
 
 #helpmain {
-	border: 1px solid #7C7360;
+	border: 1px solid #7c7360;
 	border-radius: 7px;
-	box-shadow: 0 -2px 2px rgba(0,0,0,0.1);
+	box-shadow: 0 -2px 2px rgba(0, 0, 0, 0.1);
 }
 
 /* Styles for the tooltips. */
 .tooltip {
 	border: 1px solid #aaa;
 	border-radius: 4px;
-	background: #1A1A1A;
-	box-shadow: 3px 3px 3px rgba(0,0,0,0.3);
+	background: #1a1a1a;
+	box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
 }
+
 /* The darkened background for help pop-ups. */
 .popup_container {
 	/* Flat colour fallback will be bad (visually), ie8 only though. */
-	background: rgb(0,0,0);
-	background: rgba(0,0,0,0.4);
+	background: rgb(0, 0, 0);
+	background: rgba(0, 0, 0, 0.4);
 }
+
 /* The actual pop-up wrapper. */
 .popup_window {
 	border: 1px solid #777;
 	border-radius: 7px 7px 3px 3px;
 	background-color: #fafafa;
-	box-shadow: 0 4px 6px rgba(0,0,0,0.6);
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
 }
+
 /* The text content, hopefully helpful. */
 .popup_content {
 	border: 1px solid #bbb;
 	border-bottom: 1px solid #ccc;
 	border-radius: 6px 6px 2px 2px;
 	background: #f5f5f5;
-	box-shadow: 0 -2px 3px rgba(0,0,0,0.15);
+	box-shadow: 0 -2px 3px rgba(0, 0, 0, 0.15);
 }
 
 /*	$SEARCH		*/
@@ -1490,47 +1660,64 @@ div.bbc_footnotes .meaction{
 	border: 1px solid #ddd;
 	border-radius: 5px;
 }
+
+.search_results_posts {
+	background: #fff;
+}
+
 .search_results_posts .topic_body {
-	border-top: 1px solid #CCCCCC;
-	box-shadow: 0 1px 0 #FFFFFF inset;
+	border-top: 1px solid #cccccc;
+	box-shadow: 0 1px 0 #ffffff inset;
+}
+
+.search_results_posts > li {
+	border-bottom: 4px solid #ddd;
 }
 
 /*	$MEMBERLIST		*/
 /* ------------------------------------------------------- */
 .mlist .mlist_header div {
-	border-top: 1px solid #7C7360;
+	border-top: 1px solid #7c7360;
 }
+
 .mlist li div, .whos_online dt div, .whos_online dd:nth-child(odd) div {
 	background-color: #1a1a1a;
-	border-top: 1px solid #7C7360;
-	border-bottom: 1px solid #7C7360;
+	border-top: 1px solid #7c7360;
+	border-bottom: 1px solid #7c7360;
 }
+
 .mlist li.alternate_row div, .whos_online dd:nth-child(even) div {
 	background-color: #222222;
-	border-top: 1px solid #7C7360;
-	border-bottom: 1px solid #7C7360;
+	border-top: 1px solid #7c7360;
+	border-bottom: 1px solid #7c7360;
 }
+
 .mlist li div:first-child {
-	border-left: 1px solid #7C7360;
+	border-left: 1px solid #7c7360;
 }
+
 .mlist li div:last-child {
-	border-right: 1px solid #7C7360;
+	border-right: 1px solid #7c7360;
 }
+
 .letter_row h3 {
-	border: 1px solid #7C7360;
+	border: 1px solid #7c7360;
 	border-radius: 6px 6px 0 0;
 }
+
 /*	$LOGIN		*/
 /* ------------------------------------------------------- */
 
 .coppa_contact {
 	border: 1px solid #555;
-	background: #1A1A1A;
+	background: #1a1a1a;
 	color: #555;
 }
+
 .valid_input {
 	background: #f5fff0;
 }
+
 .invalid_input {
 	background: #fff0f0;
 }
@@ -1540,39 +1727,42 @@ div.bbc_footnotes .meaction{
 
 /* Lotsa boxes. */
 .description, .information, .warningbox, .successbox, .infobox, .errorbox {
-	border: 1px solid #7C7360;
+	border: 1px solid #7c7360;
 	background: #1a1a1a;
 }
+
 /* Information boxes. */
 .information {
 	background: #f0f6f0;
-	color: #222;
 }
+
 .warningbox {
 	border-top: 1px solid #ffd324;
 	border-bottom: 1px solid #ffd324;
-	background: #F2E9BD url(../../images/profile/warning_moderate.png) 10px 50% no-repeat;
+	background: #f2e9bd url(../../images/profile/warning_moderate.png) 10px 50% no-repeat;
 	color: #222;
 }
+
 .successbox {
 	border-top: 1px solid green;
 	border-bottom: 1px solid green;
 	background: #efe url(../../images/icons/field_valid.png) 10px 50% no-repeat;
 	color: #222;
 }
+
 .infobox {
 	border-top: 1px solid #3a87ad;
 	border-bottom: 1px solid #3a87ad;
-	background: #C0D4DE url(../../images/icons/quick_sticky.png) 10px 50% no-repeat;
+	background: #c0d4de url(../../images/icons/quick_sticky.png) 10px 50% no-repeat;
 	color: #222;
 }
+
 .errorbox {
 	border-top: 2px solid #c34;
 	border-bottom: 2px solid #c34;
 	background: #fee url(../../images/profile/warning_mute.png) 10px 50% no-repeat;
 	color: #222;
 }
-
 
 /*	$PROGRESS	*/
 /* ------------------------------------------------------- */
@@ -1581,15 +1771,18 @@ div.bbc_footnotes .meaction{
 	border: 1px solid black;
 	border-radius: 5px;
 	background: white;
-	box-shadow: inset 0 2px 5px rgba(0,0,0,0.05);
+	box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.05);
 }
+
 .progress_bar .full_bar {
 	border-radius: 3px;
 	color: black;
 }
+
 .progress_bar .green_percent {
 	background-color: green;
 }
+
 .progress_bar .blue_percent {
 	background-color: blue;
 }
@@ -1599,33 +1792,39 @@ div.bbc_footnotes .meaction{
 .statistics .category_header {
 	background: none;
 	border: none;
-	border-bottom: 2px solid #7C7360;
+	border-bottom: 2px solid #7c7360;
 	text-shadow: none;
 }
+
 .statistics .flow_hidden, #forum_history .flow_hidden {
 	border: 1px solid #2f2f2f;
 	background: #222;
 }
+
 .stats.floatleft {
-	border-right: 1px solid #7C7360;
+	border-right: 1px solid #7c7360;
 }
+
 #top_row .stats dd, .statsbar {
-	border: 1px solid #7C7360;
-	background: #1A1A1A;
+	border: 1px solid #7c7360;
+	background: #1a1a1a;
 }
+
 /* Methinks topic links, etc need a little more oomph next to the orange bars. */
 #top_row .stats dd {
 	border: 1px solid transparent;
 	background: none;
 }
+
 .statsbar .bar {
-	background: #005695;
-	background-image: linear-gradient(to bottom, #1FA2E1 0%, #005695 100%);
+	background: #005695 linear-gradient(to bottom, #1fa2e1 0%, #005695 100%);
 }
+
 /* Absolute positioning stops these breaking the bars on narrow screens. */
 .statsbar .righttext {
-	background: #1A1A1A;
+	background: #1a1a1a;
 }
+
 #stats {
 	border: none;
 }
@@ -1637,6 +1836,7 @@ div.bbc_footnotes .meaction{
 	resize: vertical;
 	position: relative;
 }
+
 #recentposts .inner blockquote {
 	height: 1.5em;
 	overflow: hidden;
@@ -1649,7 +1849,7 @@ div.bbc_footnotes .meaction{
 	font-size: 15px;
 	color: #404040;
 	border-radius: 10px;
-	border: solid 1px #E4E4E4;
+	border: solid 1px #e4e4e4;
 }
 
 .floating_error .error_heading {
@@ -1657,12 +1857,12 @@ div.bbc_footnotes .meaction{
 }
 
 .floating_error .error_msg {
-	color: #3D3C3C;
+	color: #3d3c3c;
 }
 
 .floating_error .error_btn {
-	border-top: solid 1px #D6D6D6;
-	color: #157DFB;
+	border-top: solid 1px #d6d6d6;
+	color: #157dfb;
 	font-size: 16px;
 	font-weight: bold;
 }
@@ -1699,9 +1899,10 @@ div.bbc_footnotes .meaction{
 	#menu_sidebar {
 		border: 1px solid #aaa;
 		border-radius: 4px;
-		background: #1A1A1A;
-		box-shadow: 3px 3px 3px rgba(0,0,0,0.3);
+		background: #1a1a1a;
+		box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
 	}
+
 	[data-icon]:before {
 		font-family: 'FontAwesome';
 		border: 3px solid #afafaf;
@@ -1717,112 +1918,143 @@ div.bbc_footnotes .meaction{
 		color: #afafaf;
 		content: attr(data-icon);
 	}
+
 	.indicator[data-icon]:before {
 		color: #1fa2e1;
 	}
+
 	#main_menu .linklevel1 {
 		margin-right: 2px;
 	}
+
 	#main_menu .linklevel1.active, #main_menu .linklevel1.active:hover {
 		border: 1px solid transparent;
 		background: transparent;
 	}
+
 	.listlevel1#button_profile .linklevel1 {
 		min-width: 0.5em;
 	}
+
 	.mlist li div.posts {
 		border-right: 1px solid #ccc;
 	}
 }
+
 /* This one does up to 540 screens. */
 @media screen and (max-width: 33.750em) {
 	#gotop, #gobottom {
 		border: 1px solid #222;
 	}
+
 	#gobottom {
 		border-radius: 0;
 	}
+
 	#gotop {
 		border-radius: 0 8px 0 0;
 	}
+
 	#gotop:hover, #gobottom:hover {
 		color: #444;
 		text-decoration: none;
 		opacity: 1;
 	}
+
 	.board_latest {
 		border-left: 0;
 	}
+
 	.frame {
 		border-radius: 0;
 	}
+
 	.board_lastpost {
 		border-top: 1px solid #ccc;
 	}
-	.topic_listing>li {
+
+	.topic_listing > li {
 		border: 1px solid #aaa;
 		box-shadow: 3px 3px 6px #e5e5e5;
 	}
+
 	.poster:after, .posterarea:before {
 		border-bottom: 1px solid #bfbfbf;
 	}
+
 	.board_icon {
 		width: 20px;
 		height: 20px;
 	}
+
 	.on_board, .on2_board {
 		background-position: -300px -14px;
 	}
+
 	.off_board {
 		background-position: -372px -14px;
 	}
+
 	.redirect_board {
 		background-position: -444px -14px;
-	 }
+	}
+
 	.forumposts .windowbg2 {
 		background-color: #fafafa;
 	}
+
 	.forumposts .windowbg, .forumposts .windowbg2 {
 		border: 1px solid #bfbfbf;
 		box-shadow: 3px 3px 6px #e5e5e5;
 		border-radius: 3px;
 		margin-top: 8px;
 	}
+
 	.forum_category, .forumposts, .content_category {
-		background: #1A1A1A;
+		background: #1a1a1a;
 		border: none;
 	}
+
 	.listlevel2.subsections .linklevel2::after {
 		content: '';
 	}
+
 	.stats.floatleft {
 		border: none;
 	}
+
 	.subsections:hover .linklevel1:after {
 		content: "";
 	}
+
 	.whos_online dd div {
 		border-bottom: none !important;
 		border-top: none !important;
 	}
+
 	.whos_online dd:nth-child(even), .whos_online dd:nth-child(odd) {
 		margin-top: 1px;
 		border-top: 1px solid #ccc;
 	}
+
 	.online_member {
 		font-size: 1.6em;
 	}
+
 	.track_ip {
 		float: right;
 		font-size: 0.7em;
 	}
+
 	.track_ip:before {
 		content: "";
 	}
+
 	.track_ip:after {
 		content: "";
 	}
 }
+
 @media screen and (max-width: 30em) {
 	.mlist li .group {
 		border-right: 1px solid #ccc;
