@@ -100,7 +100,6 @@ input:hover, textarea:hover, button:hover, select:hover {
 }
 
 textarea:hover, .editor:hover {
-	background: #fbfbfb;
 }
 
 input:focus, textarea:focus, button:focus, select:focus, .editor:focus {
@@ -2000,7 +1999,6 @@ div.bbc_footnotes .meaction {
 	}
 
 	.forumposts .windowbg2 {
-		background-color: #fafafa;
 	}
 
 	.forumposts .windowbg, .forumposts .windowbg2 {
