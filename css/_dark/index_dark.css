@@ -1341,7 +1341,7 @@ div.bbc_footnotes .meaction {
 #postAdditionalOptionsNC {
 	border: 1px solid #7c7360;
 	border-radius: 4px;
-	background: #fdfdfd;
+	background: #0a0a0a;
 }
 
 .drop_area {
@@ -1349,6 +1349,10 @@ div.bbc_footnotes .meaction {
 	color: #444444;
 	background-color: rgb(230, 230, 230);
 	border: dashed 1px #ccc;
+}
+
+.drop_area > a {
+	color: #000;
 }
 
 .statusbar {
@@ -1379,6 +1383,7 @@ div.bbc_footnotes .meaction {
 
 #postMoreOptions, #postAttachment, #postAttachment2 {
 	border-top: 1px solid #7c7360;
+	background: #0a0a0a;
 }
 
 #postDraftOptions .settings dd, #postDraftOptions .settings dt {

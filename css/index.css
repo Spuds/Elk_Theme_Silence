@@ -1984,6 +1984,8 @@ img.new_posts {
 	text-align: right;
 	padding: 6px;
 	display: block;
+	width: 25%;
+	float: right;
 }
 .basic_row, .sticky_row, .locked_row {
 	max-width: 100%;
@@ -2369,11 +2371,11 @@ div.core_posts {
 	padding: 8px 0;
 	font-size: 0.857em;
 }
-.attachment_block {
+.attachment_block, .attachment {
 	display: inline-block;
 	max-width: 99%;
-	min-width: 21em;
-	margin: 0 .25em 1em .25em;
+	min-width: 17em;
+	margin: 0 .2em 1em .2em;
 	vertical-align: bottom;
 	text-align: center;
 	overflow: hidden;
