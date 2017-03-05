@@ -356,9 +356,18 @@ strong {
 	text-decoration: none;
 }
 
-/* plain text in prettify code */
-.pln {
-	color: #afafaf !important;
+/* Styling for tables inside posts */
+.inner > .bbc_table_container > .bbc_table td {
+	border-bottom: 1px solid #7c7360;
+	border-right: 1px solid #7c7360;
+}
+.inner > .bbc_table_container > .bbc_table th {
+	border-bottom: 1px solid #bbb;
+	border-right: 1px solid #7c7360;
+}
+.inner > .bbc_table_container > .bbc_table td:last-child,
+.inner > .bbc_table_container > .bbc_table th:last-child  {
+	border-right: none;
 }
 
 /* /me uses this a lot. (emote, try typing /me in a post.) */

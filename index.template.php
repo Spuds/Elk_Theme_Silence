@@ -11,7 +11,7 @@
  * copyright:	2011 Simple Machines (http://www.simplemachines.org)
  * license:  	BSD, See included LICENSE.TXT for terms and conditions.
  *
- * @version 1.0.6
+ * @version 1.0.10
  *
  */
 
@@ -53,12 +53,6 @@ function template_init()
 
 		// The version this template/theme is for. This should probably be the version of the forum it was created for.
 		'theme_version' => '1.0',
-
-		// Use plain buttons - as opposed to text buttons?
-		'use_buttons' => true,
-
-		// Show sticky and lock status separate from topic icons?
-		'separate_sticky_lock' => true,
 
 		// Set the following variable to true if this theme requires the optional theme strings file to be loaded.
 		'require_theme_strings' => false,
@@ -221,7 +215,7 @@ function template_html_above()
  */
 function template_body_above()
 {
-	global $context, $settings, $scripturl, $txt;
+	global $context, $settings, $scripturl, $txt, $modSettings;
 
 	// Go to top/bottom of page links and skipnav link for a11y.
 	echo '
@@ -702,7 +696,7 @@ function template_basicicons_legend()
 			' . (!empty($modSettings['pollMode']) ? '<span class="topicicon img_poll"> </span>' . $txt['poll'] : '') . '
 		</p>
 		<p>
-			<span class="topicicon img_locked"> </span>' . $txt['locked_topic'] . '<br />' . ($modSettings['enableStickyTopics'] == '1' ? '
+			<span class="topicicon img_locked"> </span>' . $txt['locked_topic'] . '<br />' . (!empty($modSettings['enableStickyTopics']) ? '
 			<span class="topicicon img_sticky"> </span>' . $txt['sticky_topic'] . '<br />' : '') . '
 		</p>';
 }
