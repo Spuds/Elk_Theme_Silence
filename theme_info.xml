@@ -2,7 +2,7 @@
 	<theme-info xmlns="http://www.elkarte.net/site/theme-info" xmlns:elk="http://www.elkarte.net/">
 		<!-- For the id, always use something unique - put your name, a colon, and then the package name. -->
 		<id>spuds:Silence</id>
-		<version>1.0</version>
+		<version>1.1</version>
 		<!-- Theme name, used purely for aesthetics. -->
 		<name>Silence</name>
 		<!-- Author: your email address or contact information. The name attribute is optional. -->
