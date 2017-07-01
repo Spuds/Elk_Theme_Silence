@@ -787,7 +787,8 @@ div.bbc_footnotes .meaction {
 }
 
 .category_boards .board_icon, .board_key:before {
-	background: url(../../images/_dark/board_icons.png) no-repeat;
+	background-image: url(../../images/_dark/board_icons.png);
+	background-repeat: no-repeat;
 }
 
 .on_board {
