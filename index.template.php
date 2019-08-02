@@ -285,7 +285,7 @@ function template_body_above()
 
 /**
  * If the user is logged in, display the time, or a maintenance warning for admins.
- * @todo - TBH I always intended the time/date to be more or less a place holder for more important things.
+ *
  * The maintenance mode warning for admins is an obvious one, but this could also be used for moderation notifications.
  * I also assumed this would be an obvious place for sites to put a string of icons to link to their FB, Twitter, etc.
  * This could still be done via conditional, so that administration and moderation notices were still active when
@@ -578,7 +578,7 @@ function template_menu()
 				</nav>';
 
 	// Define the upper_section toggle in javascript.
-				<script><!-- // --><![CDATA[
+	addInlineJavascript('
 					var oMainHeaderToggle = new elk_Toggle({
 						bToggleEnabled: true,
 						bCurrentlyCollapsed: ' . (empty($context['minmax_preferences']['upshrink']) ? 'false' : 'true') . ',
