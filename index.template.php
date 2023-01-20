@@ -9,7 +9,7 @@
  * copyright:	2011 Simple Machines (http://www.simplemachines.org)
  * license:  	BSD, See included LICENSE.TXT for terms and conditions.
  *
- * @version 1.1.4
+ * @version 1.1.9
  *
  */
 
@@ -88,11 +88,11 @@ function template_init()
 		// How do we get anchors only, where they will work? Spans and strong only where necessary?
 		'page_index_template' => array(
 			'base_link' => '<li class="linavPages"><a class="navPages" href="{base_link}" role="menuitem">%2$s</a></li>',
-			'previous_page' => '<span class="previous_page" role="menuitem">{prev_txt}</span>',
+			'previous_page' => '<span class="previous_page">{prev_txt}</span>',
 			'current_page' => '<li class="linavPages"><strong class="current_page" role="menuitem">%1$s</strong></li>',
-			'next_page' => '<span class="next_page" role="menuitem">{next_txt}</span>',
+			'next_page' => '<span class="next_page">{next_txt}</span>',
 			'expand_pages' => '<li class="linavPages expand_pages" role="menuitem" {custom}> <a href="#">...</a> </li>',
-			'all' => '<span class="linavPages all_pages" role="menuitem">{all_txt}</span>',
+			'all' => '<span class="linavPages all_pages">{all_txt}</span>',
 		),
 
 		// @todo find a better place if we are going to create a notifications template
@@ -104,7 +104,7 @@ function template_init()
  * Simplify the use of callbacks in the templates.
  *
  * @param string $id - A prefix for the template functions the final name
- *                     template_{$id}_{$array[n]}
+ *                     should look like: template_{$id}_{$array[n]}
  * @param string[] $array - The array of function suffixes
  */
 function call_template_callbacks($id, $array)
@@ -140,8 +140,6 @@ function template_html_above()
 		echo '
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />';
 
-	// Save some database hits, if a width for multiple wrappers is set in admin.
-	if (!empty($settings['forum_width']))
 		echo '
 	<meta name="viewport" content="width=device-width" />
 	<meta name="mobile-web-app-capable" content="yes" />
@@ -156,6 +154,13 @@ function template_html_above()
 	if (!empty($context['robot_no_index']))
 		echo '
 	<meta name="robots" content="noindex" />';
+
+	// If we have any Open Graph data, here is where is inserted.
+	if (!empty($context['open_graph']))
+	{
+		echo '
+	' .implode("\n\t", $context['open_graph']);
+	}
 
 	// load in any css from addons or themes so they can overwrite if wanted
 	template_css();
@@ -285,7 +290,7 @@ function template_body_above()
 
 /**
  * If the user is logged in, display the time, or a maintenance warning for admins.
- *
+ * @todo - TBH I always intended the time/date to be more or less a place holder for more important things.
  * The maintenance mode warning for admins is an obvious one, but this could also be used for moderation notifications.
  * I also assumed this would be an obvious place for sites to put a string of icons to link to their FB, Twitter, etc.
  * This could still be done via conditional, so that administration and moderation notices were still active when
@@ -448,6 +453,24 @@ function template_html_below()
 	// load in any javascript that could be deferred to the end of the page
 	theme()->template_javascript(true);
 
+	// Schema microdata about the organization?
+	if (!empty($context['smd_site']))
+	{
+		echo '
+	<script type="application/ld+json">
+	', json_encode($context['smd_site'], JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE), '
+	</script>';
+	}
+
+	// Schema microdata about the post?
+	if (!empty($context['smd_article']))
+	{
+		echo '
+	<script type="application/ld+json">
+	', json_encode($context['smd_article'], JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE), '
+	</script>';
+	}
+
 	// Anything special to put out?
 	if (!empty($context['insert_after_template']))
 		echo $context['insert_after_template'];
@@ -523,7 +546,7 @@ function template_menu()
 	echo '
 						<li id="collapse_button" class="listlevel1">
 							<a class="linklevel1 panel_toggle">
-									<span id="upshrink" class="collapse" style="display: none;" title="', $txt['upshrink_description'], '"></span>
+								<i id="upshrink" class="hide chevricon i-chevron-up icon icon-lg" title="', $txt['upshrink_description'], '"></i>
 							</a>
 						</li>';
 
@@ -628,10 +651,6 @@ function template_button_strip($button_strip, $direction = '', $strip_options = 
 
 	if (!is_array($strip_options))
 		$strip_options = array();
-
-	// List the buttons in reverse order for RTL languages.
-	if ($context['right_to_left'])
-		$button_strip = array_reverse($button_strip, true);
 
 	// Create the buttons... now with cleaner markup (yay!).
 	$buttons = array();

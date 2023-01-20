@@ -1,13 +1,17 @@
-/**
+/*!
  * @name      ElkArte Forum
  * @copyright ElkArte Forum contributors
  * @license   BSD http://opensource.org/licenses/BSD-3-Clause
  *
- * This software is a derived product, based on:
+ * This file contains code covered by:
  * copyright:	2011 Simple Machines (http://www.simplemachines.org)
  * license:		BSD, See included LICENSE.TXT for terms and conditions.
  *
- * @version 1.1
+ * @version 1.1.9
+ */
+
+/**
+ * This file contains javascript associated with the current theme
  */
 
 $(function() {
@@ -49,16 +53,20 @@ $(function() {
 	if (typeof elk_codefix === 'function')
 		elk_codefix();
 
+	// Remove "show more" from short quotes
+	if (typeof elk_quotefix === 'function')
+		elk_quotefix();
+
 	// Enable the ... page expansion
 	$('.expand_pages').expand_pages();
 
-	// Collapsabile fieldsets, pure candy
+	// Collapsible fieldsets, pure candy
 	$(document).on('click', 'legend', function(){
 		$(this).siblings().slideToggle("fast");
 		$(this).parent().toggleClass("collapsed");
 	});
 
-	$('legend', function () {
+	$('legend').each(function () {
 		if ($(this).data('collapsed'))
 			$(this).click();
 	});

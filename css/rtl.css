@@ -151,6 +151,14 @@ h2 a.collapse {
 	padding: 4px 0 4px 8px;
 }
 
+.bbc_img.floatleft {
+	padding: .1em 0 .1em .75em;
+}
+
+.bbc_img.floatright {
+	padding: .1em .75em .1em 0;
+}
+
 /*	$AJAX		*/
 /* ------------------------------------------------------- */
 
@@ -175,10 +183,27 @@ h2 a.collapse {
 	padding: 12px 8px 4px 3px;
 	float: left;
 }
-#search_form * {
-	/* Webkit (bleh) fix. */
+
+#search_form button, #search_form input, #search_form label {
 	float: right;
 }
+
+#search_form button {
+	margin-right: -5px;
+	margin-left: 0;
+}
+
+#search_form select {
+	border: 1px solid;
+	border-left: none;
+	width: 10em;
+}
+
+#search_form select:focus {
+	border: 1px solid;
+	border-left: none;
+}
+
 /* The main title. */
 #forumtitle, .rightheader #forumtitle {
 	padding: 10px 13px 6px 10px;
@@ -344,10 +369,6 @@ h2 a.collapse {
 
 /* Styles for the standard button lists.
 /* ------------------------------------------------------- */
-.buttonlist li {
-	float: right;
-	margin: 0 4px 0 0;
-}
 
 /* The quick buttons. */
 /* ------------------------------------------------------- */
@@ -496,6 +517,7 @@ dl.settings img {
 .icon_anchor {
 	padding: 2px 0 0 6px;
 	float: right;
+	transform: scaleX(-1);
 }
 .board_info .board_description, .board_info .moderators {
 	margin: 0 56px 0 0;
@@ -670,7 +692,7 @@ dl.settings img {
 	float: right;
 	margin: 2px 2px 0 0;
 }
-.inner {
+.inner, .messageContent {
 	padding: 7px 2px 2px 8px;
 }
 /* Used by video embed JS when autolinking video links */
@@ -727,12 +749,11 @@ ul.post_options {
 ul.post_options li {
 	float: right;
 }
-#postAttachment dd, #postAttachment2 dd {
+
+#postAttachment2 dd {
 	margin: 4px 12px 4px 0;
 }
-#postAttachment dd {
-	float: right;
-}
+
 .draftautosave {
 	text-align: left;
 }
@@ -821,7 +842,7 @@ ul.post_options li {
 	padding-left: 0;
 	padding-right: 30px;
 }
-.profileblock .cf_icon {
+.profileblock .cf_icons {
 	float: right;
 	margin: 4px 0 0 5px;
 }

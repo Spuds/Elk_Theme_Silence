@@ -17,6 +17,9 @@ body {
 [contenteditable="true"] {
 	font: 87.5%/150% "Segoe UI", "Helvetica Neue", "Liberation Sans", "Nimbus Sans L", Arial, sans-serif;
 }
+html>body>p, html>body>div {
+	font: 87.5%/150% "Segoe UI", "Helvetica Neue", "Liberation Sans", "Nimbus Sans L", Arial, sans-serif;
+}
 ul, ol {
 	margin-top: 0;
 	margin-bottom: 0;

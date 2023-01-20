@@ -457,3 +457,9 @@ a.sceditor-button-space, .sceditor-button-space div {
 	/*background: url('../images/bbc/redo.png');*/
 	background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAmZJREFUeNqcUs1rU0EQn/1478UmBluSNqlF00O1HorQBD0XD60XT0KpSK+CF/sn9B8Q7LFe1FrxIOKhFbxLD0JSCn6AKW0jNm0JGtR8NPv2vV1nt18hiIIDP2be7s6838z8SOrua0gPDgLjHChj0GmnolHrCSHz6N6GYbgYSAkGIYInBwbgbyZaLXBc14TZQxhbPLqn8A9TYQi+EPaPtybSWfQzeHz76J63vc1orafR5xCp9uIai5hC1aqEqYmB7NOlrRnQ2jKxBTBxzGF69vJw94X+3li35zAPz+wbpbSF+a7VJFQqLZgcP599trRumHzjWqmMQ9Xs2NWzow51Y6HUIEEd0G9LNl5KBb6vrJfYlm1B+v50bqR3iCgeUyRU66XKTnHze7XRxKY77MpIMptKxeHxi7UCbuUBY+wNl6KVSyfiPVKGsLmxt7P6fvs5IXSOcl4+noFWoIIgH03G4eXyR5vMXc9ugvstkWKMeqbfD5+2q1L4c9x1y7RtC6LZtPHyq1Wb7Hju8RpNC7avr5LAvi/t3pu1GphzY0ZgRgcosoIREsHJS18AbTSBUooFhNj7XA/Eij7t9Z3r66mtFe/hYOfwsW0hDAILLHDniJHdkFLHDPLFrd1cPXMm7Q4N98elmvpVLI1rnGL7AE0ROBmKYWMLkq7JhQyLuE8S16+NlmOJGEOOUX6gIooxx8BB76B3EakIwMr9hcKh4ICxSzd+BML/0tgoXYxz8HisywkclweagECW+yFAHfET+VRxLHUkUn+X31VKPUQAidx8BKGRahBkcBF/lHKnIaGTFvSBpv/bfgswAEXYRQqFxaHLAAAAAElFTkSuQmCC);
 }
+
+@media screen and (max-width: 50em) {
+	a.sceditor-button-space, .sceditor-button-space div {
+		display: none;
+	}
+}
